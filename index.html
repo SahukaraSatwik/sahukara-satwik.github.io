@@ -1,110 +1,1321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SOC Analyst & Cybersecurity Researcher specializing in Threat Hunting, SIEM, and Incident Response.">
-  <meta name="keywords" content="SOC Analyst, Cybersecurity, SIEM, Threat Hunting, Incident Response, Google SecOps, CrowdStrike Falcon">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data:;">
-  <meta property="og:title" content="Sahukara Satwik - SOC Analyst">
-  <meta property="og:description" content="SOC Analyst & Cybersecurity Researcher specializing in Threat Hunting and SIEM.">
-  <meta property="og:image" content="preview.png">
-  <meta property="og:url" content="https://sahukara-satwik.github.io/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://sahukara-satwik.github.io/">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <title>Sahukara Satwik | SOC Analyst Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOC Analyst & Cybersecurity Researcher specializing in Threat Hunting, SIEM, and Incident Response.">
+    <meta name="keywords" content="SOC Analyst, Cybersecurity, SIEM, Threat Hunting, Incident Response, Google SecOps, CrowdStrike Falcon, Microsoft Defender XDR, Wazuh, Suricata">
+    <meta name="author" content="Sahukara Satwik">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self';">
+    
+    <link rel="canonical" href="https://sahukara-satwik.github.io/">
+    
+    <meta property="og:title" content="Sahukara Satwik - SOC Analyst">
+    <meta property="og:description" content="SOC Analyst & Cybersecurity Researcher specializing in Threat Hunting and SIEM.">
+    <meta property="og:image" content="preview.png">
+    <meta property="og:url" content="https://sahukara-satwik.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sahukara Satwik - SOC Analyst">
+    <meta name="twitter:description" content="SOC Analyst & Cybersecurity Researcher specializing in Threat Hunting and SIEM.">
+    <meta name="twitter:image" content="preview.png">
+    
+    <title>Sahukara Satwik - SOC Analyst & Cybersecurity Researcher</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sahukara Satwik",
+      "jobTitle": "SOC Analyst",
+      "description": "SOC Analyst specializing in Threat Hunting, SIEM, and Incident Response",
+      "email": "satwiksahukara69@gmail.com",
+      "telephone": "+91-9441237511",
+      "url": "https://sahukara-satwik.github.io/",
+      "sameAs": [
+        "https://www.linkedin.com/in/sahukara-satwik"
+      ],
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "National Forensic Sciences University"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Adikavi Nannaya University"
+        }
+      ],
+      "knowsAbout": [
+        "Cybersecurity",
+        "SOC Analysis",
+        "Threat Hunting",
+        "Incident Response",
+        "SIEM",
+        "Digital Forensics"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tecplix Technologies"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Incident Responder",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "CrowdStrike Falcon"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Digital Forensic Essentials",
+          "credentialCategory": "certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "EC-Council"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #112240;
+            --accent-color: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+            --highlight: #64ffda;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(100, 255, 218, 0.3);
+            border-top-color: var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background: linear-gradient(135deg, #f7f9fc 0%, #e2e8f0 100%);
+            color: #1a202c;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --primary-color: #f7f9fc;
+            --secondary-color: #e2e8f0;
+        }
+
+        body.light-mode .loader {
+            background: #f7f9fc;
+        }
+
+        body.light-mode .btn {
+            border-color: #1a202c;
+            color: #1a202c;
+        }
+
+        body.light-mode .btn-primary {
+            background: #64ffda;
+            color: #1a202c;
+            border-color: #64ffda;
+        }
+
+        body.light-mode .tool-badge,
+        body.light-mode .skill-category,
+        body.light-mode .timeline-content,
+        body.light-mode .project-card,
+        body.light-mode .cert-card,
+        body.light-mode .achievement-item,
+        body.light-mode .contact-link,
+        body.light-mode .stat-card {
+            background: #fff;
+            color: #1a202c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        body.light-mode .timeline-title,
+        body.light-mode .project-card h3,
+        body.light-mode .skill-category h3 {
+            color: #2d3748;
+        }
+
+        body.light-mode header,
+        body.light-mode footer {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a202c;
+        }
+
+        body.light-mode .logo,
+        body.light-mode .nav-links a {
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(100, 255, 218, 0.6);
+        }
+
+        #back-to-top.show {
+            display: flex;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-color), #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--accent-color);
+            background: transparent;
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: rgba(100, 255, 218, 0.9);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+        }
+
+        /* Tool Badges */
+        .tool-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        .tool-badge {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .tool-badge:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .tool-badge i {
+            color: var(--accent-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 3px solid var(--primary-color);
+        }
+
+        .timeline-content {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+
+        .timeline-company {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .timeline-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .timeline-location {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+        }
+
+        .project-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+        }
+
+        .project-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+        }
+
+        .cert-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cert-issuer {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Achievements */
+        .achievements-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .achievement-item {
+            background: rgba(17, 34, 64, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+
+        .achievement-item:hover {
+            transform: translateX(10px);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        .achievement-text {
+            color: var(--text-secondary);
+        }
+
+        /* Contact */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            padding: 1rem;
+            border-radius: 8px;
+            background: rgba(17, 34, 64, 0.6);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .contact-link:hover {
+            color: var(--accent-color);
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 25, 47, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: var(--secondary-color);
+                width: 100%;
+                padding: 1rem 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tool-badges {
+                justify-content: center;
+            }
+
+            #back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Main Navigation">
-      <div class="logo">Sahukara Satwik</div>
-      <div id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
 
-  <main>
-    <section id="about" data-aos="fade-up">
-      <h2>About Me</h2>
-      <p>Cybersecurity Analyst with MSc in Cyber Security, experienced in SOC operations, digital forensics, and security research. Specialized in incident detection, response, and analysis using Google SecOps, Sumo Logic, Microsoft XDR, and CrowdStrike Falcon.</p>
-      <a href="Sahukara_Satwik_Resume.pdf" class="btn" download>Download Resume</a>
-    </section>
+    <button id="theme-toggle" class="btn" aria-label="Toggle dark/light theme">🌗</button>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>Core Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Security Tools</h3>
-          <div class="skill-tags">
-            <span>Google SecOps</span>
-            <span>Sumo Logic</span>
-            <span>Microsoft XDR</span>
-            <span>CrowdStrike Falcon</span>
-            <span>Wazuh</span>
-            <span>Suricata</span>
-          </div>
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header>
+        <nav class="container" aria-label="Main navigation">
+            <a href="#" class="logo" aria-label="Homepage">&lt;SS /&gt;</a>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <p class="hero-subtitle">Hello, I'm</p>
+                <h1 class="hero-title">Sahukara Satwik</h1>
+                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">SOC Analyst & Cybersecurity Researcher</h2>
+                <p class="hero-description">
+                    Specializing in Security Operations, Threat Hunting, and Incident Response with expertise in SIEM/XDR/EDR platforms. 
+                    Passionate about defending against sophisticated cyber threats and building robust security infrastructures.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary" aria-label="Contact me">Get In Touch</a>
+                    <a href="Sahukara_Satwik_Resume.pdf" class="btn" download aria-label="Download resume"><i class="fas fa-download"></i> Download Resume</a>
+                </div>
+                
+                <div class="tool-badges">
+                    <div class="tool-badge">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        <span>Google Chronicle</span>
+                    </div>
+                    <div class="tool-badge">
+                        <i class="fas fa-crow" aria-hidden="true"></i>
+                        <span>CrowdStrike Falcon</span>
+                    </div>
+                    <div class="tool-badge">
+                        <i class="fas fa-shield-virus" aria-hidden="true"></i>
+                        <span>Microsoft Defender XDR</span>
+                    </div>
+                    <div class="tool-badge">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <span>Sumo Logic</span>
+                    </div>
+                    <div class="tool-badge">
+                        <i class="fas fa-database" aria-hidden="true"></i>
+                        <span>Wazuh</span>
+                    </div>
+                    <div class="tool-badge">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                        <span>Suricata</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill-category">
-          <h3>Frameworks</h3>
-          <div class="skill-tags">
-            <span>MITRE ATT&CK</span>
-            <span>Cyber Kill Chain</span>
-            <span>STRIDE</span>
-            <span>DREAD</span>
-          </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>
+                        I'm a highly skilled and results-oriented SOC Analyst specializing in leveraging cutting-edge security tools and frameworks to protect digital assets and mitigate cyber threats. Currently completing my M.Sc. in Cyber Security from National Forensic Sciences University, I combine academic excellence with hands-on industry experience.
+                    </p>
+                    <p>
+                        With expertise in real-time monitoring, incident response, and threat hunting, I excel at analyzing complex security data to identify and neutralize threats before they cause significant impact. My proficiency spans platforms such as Google Chronicle, Sumo Logic, CrowdStrike Falcon, and Microsoft Defender XDR.
+                    </p>
+                    <p>
+                        I'm passionate about continuous learning and collaboration, thriving in dynamic, high-priority environments where I can contribute to building resilient and proactive security postures. My background includes forensic science expertise, making me uniquely positioned to approach cybersecurity with both investigative rigor and technical depth.
+                    </p>
+                </div>
+                <div class="stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Security Tools</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7+</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Top</div>
+                        <div class="stat-label">IIT Kanpur CTF</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="projects" data-aos="fade-up">
-      <h2>Projects</h2>
-      <ul>
-        <li>Developed Threat Detection Tool integrating MITRE ATT&CK and ELK Stack.</li>
-        <li>Implemented SOC automation pipeline using Wazuh, Filebeat, and Suricata.</li>
-        <li>Conducted vulnerability assessments and SIEM log correlation for incident triage.</li>
-      </ul>
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">SOC Analyst</h3>
+                                <p class="timeline-company">Tecplix Technologies</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p class="timeline-date">Sept 2025 - Present</p>
+                                <p class="timeline-location">Bangalore</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Monitor and secure enterprise client infrastructures using Google SecOps, Sumo Logic, CrowdStrike Falcon, and Microsoft Defender XDR</li>
+                            <li>Execute in-depth alert triage and incident escalation, reducing false positives and strengthening detection accuracy</li>
+                            <li>Conduct targeted threat hunting operations leveraging advanced detection rules and event correlation</li>
+                            <li>Optimize SOC workflows through detection rule tuning and refinement of incident response playbooks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Cyber Threat Intelligence</h3>
+                                <p class="timeline-company">C3iHub, IIT Kanpur</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p class="timeline-date">Dec 2024 - June 2025</p>
+                                <p class="timeline-location">Kanpur</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Conducted in-depth threat modelling to identify, assess, and prioritize organizational security risks</li>
+                            <li>Studied various frameworks and research papers on threat modelling implementations to integrate best practices</li>
+                            <li>Developed Python automation scripts for threat modelling tools to streamline processes and reduce manual effort</li>
+                            <li>Engineered comprehensive SOC environment using Wazuh and Suricata for real-time threat detection</li>
+                            <li>Designed and managed honeypot environments to capture attacker methodologies and generate threat intelligence</li>
+                            <li>Built automated security alert system via Telegram bot for enhanced incident response workflows</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Cyber Security Researcher</h3>
+                                <p class="timeline-company">Secure Smith</p>
+                            </div>
+                            <div style="text-align: right;">
+                                <p class="timeline-date">Oct 2023 - Aug 2025</p>
+                                <p class="timeline-location">Ahmedabad</p>
+                            </div>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Conducted cutting-edge research on emerging cyber threats and vulnerability landscapes</li>
+                            <li>Developed innovative security solutions to protect digital assets across diverse environments</li>
+                            <li>Collaborated on projects enhancing understanding of cyber risks and defensive strategies</li>
+                            <li>Analyzed security data to identify and mitigate vulnerabilities before exploitation</li>
+                            <li>Contributed to internal security documentation and knowledge sharing initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="certifications" data-aos="fade-up">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Certificate of Achievement – Indian Institute of Cyber Security & Forensics</li>
-        <li>Certified SOC Analyst (EC-Council)</li>
-        <li>Google Cybersecurity Professional Certificate</li>
-      </ul>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> SIEM/XDR/EDR</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google SecOps</span>
+                        <span class="skill-tag">Sumo Logic</span>
+                        <span class="skill-tag">Wazuh</span>
+                        <span class="skill-tag">Suricata</span>
+                        <span class="skill-tag">Splunk</span>
+                        <span class="skill-tag">Elastic Stack</span>
+                        <span class="skill-tag">CrowdStrike Falcon</span>
+                        <span class="skill-tag">Microsoft Defender XDR</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-user-shield" aria-hidden="true"></i> Security Operations</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Incident Response</span>
+                        <span class="skill-tag">Threat Hunting</span>
+                        <span class="skill-tag">Threat Intelligence</span>
+                        <span class="skill-tag">Malware Analysis</span>
+                        <span class="skill-tag">Forensics</span>
+                        <span class="skill-tag">Log Analysis</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-sitemap" aria-hidden="true"></i> Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MITRE ATT&CK</span>
+                        <span class="skill-tag">STRIDE</span>
+                        <span class="skill-tag">DREAD</span>
+                        <span class="skill-tag">Cyber Kill Chain</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up">
+                    <h3><i class="fas fa-tools" aria-hidden="true"></i> Security Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nessus</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Kibana</span>
+                        <span class="skill-tag">Logstash</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-code" aria-hidden="true"></i> Scripting & Automation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Bash</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-server" aria-hidden="true"></i> Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Linux (Ubuntu)</span>
+                        <span class="skill-tag">Active Directory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Get in Touch</h2>
-      <p>Available for security operations and research roles.</p>
-      <div class="contact-links">
-        <a href="mailto:sahukarastwik@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/sahukarastwik" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/sahukarastwik" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-      </div>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <h3>Threat Modeling Tool</h3>
+                    <p class="project-date">December 2024 - May 2025</p>
+                    <ul class="project-description">
+                        <li>Built a comprehensive threat modeling tool integrating STRIDE, DREAD, and MITRE ATT&CK frameworks</li>
+                        <li>Developed Python automation for log analysis against JSON threat models</li>
+                        <li>Implemented quantitative risk scoring with automated threat categorization</li>
+                        <li>Designed secure SDLC integration process</li>
+                    </ul>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Active Directory Forensics</h3>
+                    <p class="project-date">February 2024 - July 2024</p>
+                    <ul class="project-description">
+                        <li>Applied forensic techniques to collect and analyze AD artifacts</li>
+                        <li>Simulated SMB Relay attacks to identify authentication flaws</li>
+                        <li>Provided actionable security hardening recommendations</li>
+                        <li>Enhanced understanding of domain security attack vectors</li>
+                    </ul>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>SOC Environment Deployment</h3>
+                    <p class="project-date">C3iHub Project</p>
+                    <ul class="project-description">
+                        <li>Deployed complete SOC infrastructure with Wazuh and Suricata</li>
+                        <li>Built live security dashboards for real-time monitoring</li>
+                        <li>Created automated alert system via Telegram bot</li>
+                        <li>Established honeypot environments for threat intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Sahukara Satwik. All Rights Reserved.</p>
-  </footer>
+    <section id="certifications" style="background: rgba(17, 34, 64, 0.3);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-aos="fade-up">
+                    <h3>Incident Responder</h3>
+                    <p class="cert-issuer">CrowdStrike Falcon</p>
+                    <p class="cert-date">September 2025</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="50">
+                    <h3>Digital Forensic Essentials</h3>
+                    <p class="cert-issuer">EC-Council</p>
+                    <p class="cert-date">August 2024</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Cyber Threat Intelligence 101</h3>
+                    <p class="cert-issuer">arcX</p>
+                    <p class="cert-date">November 2024</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+                    <h3>Customizing Dashboards in Falcon</h3>
+                    <p class="cert-issuer">CrowdStrike Falcon 106</p>
+                    <p class="cert-date">2025</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Create a Falcon Fusion SOAR Workflow</h3>
+                    <p class="cert-issuer">CrowdStrike Falcon 115</p>
+                    <p class="cert-date">2025</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="250">
+                    <h3>Real Time Response Fundamentals</h3>
+                    <p class="cert-issuer">CrowdStrike Falcon 140</p>
+                    <p class="cert-date">2025</p>
+                </div>
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Cybersecurity Job Simulation</h3>
+                    <p class="cert-issuer">Mastercard</p>
+                    <p class="cert-date">2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <button id="theme-toggle" aria-label="Toggle Theme">🌗</button>
-  <button id="back-to-top" aria-label="Back to Top">↑</button>
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Achievements</h2>
+            <div class="achievements-list">
+                <div class="achievement-item" data-aos="fade-right">
+                    <i class="fas fa-trophy achievement-icon" aria-hidden="true"></i>
+                    <div class="achievement-text">
+                        <strong>Top Rank Holder</strong> - IIT Kanpur CTF (All India Level)
+                    </div>
+                </div>
+                <div class="achievement-item" data-aos="fade-right" data-aos-delay="100">
+                    <i class="fas fa-chart-line achievement-icon" aria-hidden="true"></i>
+                    <div class="achievement-text">
+                        <strong>Built and deployed</strong> live SOC dashboards with Wazuh + Suricata
+                    </div>
+                </div>
+                <div class="achievement-item" data-aos="fade-right" data-aos-delay="200">
+                    <i class="fas fa-book achievement-icon" aria-hidden="true"></i>
+                    <div class="achievement-text">
+                        <strong>Featured contributor</strong> to C3iHub's internal security playbook
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-  <script src="script.js" defer></script>
+    <section id="contact">
+        <div class="container contact-content">
+            <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+            <p data-aos="fade-up">Open to security operations, research, and consulting opportunities. Let's connect.</p>
+            <div class="contact-links">
+                <a href="mailto:satwiksahukara69@gmail.com" class="contact-link" data-aos="zoom-in" aria-label="Email Sahukara Satwik">
+                    <i class="fas fa-envelope contact-icon" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sahukara-satwik" target="_blank" rel="noopener noreferrer" class="contact-link" data-aos="zoom-in" data-aos-delay="100" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin contact-icon" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="tel:+919441237511" class="contact-link" data-aos="zoom-in" data-aos-delay="200" aria-label="Call Sahukara Satwik">
+                    <i class="fas fa-phone contact-icon" aria-hidden="true"></i>
+                    <span>Phone</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Sahukara Satwik. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script defer>
+        // Wait for DOM to be fully loaded
+        window.addEventListener('DOMContentLoaded', function() {
+            // Hide loader after page load
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ 
+                    duration: 800, 
+                    offset: 100,
+                    once: true 
+                });
+            }
+
+            // Mobile Menu Toggle
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+            
+            toggle.addEventListener("click", function() {
+                const isExpanded = navLinks.classList.contains('active');
+                navLinks.classList.toggle("active");
+                toggle.setAttribute('aria-expanded', !isExpanded);
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('light-mode');
+                
+                // Save theme preference
+                if (document.body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // Back to Top Button
+            const backToTop = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Optional: Google Analytics (replace with your tracking ID)
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+        // gtag('config', 'GA_MEASUREMENT_ID', { 'anonymize_ip': true });
+    </script>
 </body>
 </html>
