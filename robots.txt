@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sahukara-satwik.github.io/sitemap.xml
