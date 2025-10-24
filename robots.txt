@@ -1,3 +1,6 @@
+# Allow all web crawlers to access all content
 User-agent: *
-Allow: /
+Disallow:
+
+# Specify the location of the sitemap
 Sitemap: https://sahukara-satwik.github.io/sitemap.xml
